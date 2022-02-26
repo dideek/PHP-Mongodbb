@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<title>LCK</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+	#para{
+	width: 550px;
+	}
+        .imgmenu{
+		cursor:pointer;
+		float:left; 
+		width:80px;
+		height:200px;
+		border-color:white;
+		border-style:solid;
+		border-right-width:2px;
+		border-left-width:0px;
+		border-top-width:0px;
+		border-bottom-width:0px;
+		color:white;
+        }
+        .imgmenu a{
+        text-decoration:none;
+        font-family: Monaco, Verdana, Sans-serif;
+        font-size: 13px;
+        color:white;
+        font-weight:bold;
+        }
+        </style>
+        <script src="jquery.js"></script>
+        <script src="imagemenu.js"> </script>
+        <script>
+        $(document).ready(function(){
+         $("#para td").mouseover(function(){
+          var idd=$(this).attr('id');
+          enlargeimg(idd);
+        });
+        $("#para td").mouseout(function(){
+            actualimg();
+        });
+        });
+        </script>
+</head>
+<body>
+<div id="container">
+    <header>
+<h1>League of Legends - E-sports</h1>
+<img src="lol.png" alt="logo league" height="100">
+    
+    </header>
+    <div id="lewy">
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="lec.html">LEC</a></li>
+                <li><a href="lcs.html">LCS</a></li>
+                <li><a href="lck.html">LCK</a></li>
+				<li><a href="form.php">Przeslij Zdjecie</a></li>
+				<li><a href="galeria.php">Galeria Zdjęć</a></li>
+                                <li><a href="rejestracja.php">Rejestracja</a></li>
+                <li><a href="logowanie.php">Logowanie/Wylogowanie</a></li>
+				<li><a href="ulubione.php">Ulubione zdjęcia</a></li>
+           
+        
+        </ul>  
+            
+        </nav>
+    </div>
+<div id="main">
+   
+League of Legends Champions Korea, powszechnie w skrócie LCK, to główne rozgrywki e-sportowe League of Legends w Korei Południowej. Liga, w której bierze udział dziesięć drużyn, trwa dwa sezony w roku i służy jako bezpośrednia droga do kwalifikacji do corocznych mistrzostw świata League of Legends. LCK jest administrowane we współpracy między Riot Games i KeSPA.
+Liga była wcześniej nazywana League of Legends Champions, zanim przeszła poważną restrukturyzację pod koniec 2014 r., W wyniku której nastąpiła zmiana formatu rozgrywek i rebranding na obecną nazwę. OGN zastrzegł sobie wyłączne prawa do transmisji ligi do 2016 roku, kiedy prawa zostały podzielone z SPOTV Games. W 2019 roku Riot Games przejęło nadawanie LCK.
+LCK jest powszechnie uważany za najsilniejszy turniej League of Legends na świecie, a mistrzostwa świata w tej grze zostały wygrane przez drużyny z ligi od 2013 do 2017 roku; 2018 był pierwszym sezonem od 2013 roku, w którym drużyna z LCK nie zdobyła mistrzostwa świata.
+<p> Drużyny LCK : </p>
+<table id="para" >
+    <tr>
+    <td class="imgmenu" style="background:url(t1.png) repeat scroll 0%; " id="img1"><a href='https://lol.gamepedia.com/T1'>SKT T1</a></td>
+    <td class="imgmenu" style=" background:url(ssg.png) repeat scroll 0%;" id="img2" ><a href='https://lol.gamepedia.com/Samsung_Galaxy'>SSG</a></td>
+    <td class="imgmenu" style=" background:url(geng.png) repeat scroll 0%; " id="img3" ><a href='https://lol.gamepedia.com/Gen.G'>GEN G</a></td>
+    <td class="imgmenu" style=" background:url(drx.png) repeat scroll 0%; " id="img4" ><a href='https://lol.gamepedia.com/DRX'>DRX</a></td>
+    </tr>
+	</table>
+</div>
+<footer>
+    Copyright 2020, Garbowski Piotr 184390
+</footer>
+
+
+
+</div>
+
+<script>
+sessionStorage.setItem("lastliga", "LCK");
+localStorage.setItem("LCK","1");
+localStorage.setItem("pligi","1");
+</script>
+
+</body>

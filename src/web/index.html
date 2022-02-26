@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+	<title>E-Sport</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<noscript>
+<style>
+#hide,#photo{
+display:none;
+}
+#main ul{
+display:none;
+}
+</style>
+</noscript>
+	
+
+</head>
+<body>
+
+<div id="container">
+    <header>
+<h1>League of Legends - E-sports</h1>
+<img src="lol.png" alt="logo league" height="100">
+    
+    </header>
+    <div id="lewy">
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>      
+                <li><a href="lec.html">LEC</a></li>
+                <li><a href="lcs.html">LCS</a></li>
+                <li><a href="lck.html">LCK</a></li>
+				<li><a href="form.php">Przeslij Zdjecie</a></li>
+				<li><a href="galeria.php">Galeria Zdjęć</a></li>
+				<li><a href="rejestracja.php">Rejestracja</a></li>
+                <li><a href="logowanie.php">Logowanie/Wylogowanie</a></li>
+				<li><a href="ulubione.php">Ulubione zdjęcia</a></li>
+                
+           
+        
+        </ul>  
+            
+        </nav>
+    </div>
+<div id="main">
+    <div id="tabs">
+    <ul>
+    <li class="tabsli"><a href="#tabs-1">1</a></li>
+    <li class="tabsli"><a href="#tabs-2">2</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Pierwsza, poważna rywalizacja pomiędzy graczami odbyła się 19 października 1972 roku na Uniwersytecie Stanforda, którzy grali w Spacewar! - strzelankę w przestrzeni kosmicznej. To wydarzenie zostało opisane przez magazyn Rolling Stone jako "intergalactic spacewar olympics" (międzygalaktyczne olimpiady wojny kosmicznej). W międzyczasie grano również w arcade'owe gry takie jak Pac-Man czy Donkey Kong. Wraz z upływem czasu i rozwojem komputerów, konsol i internetu, organizowano kilka turniejów w tym najbardziej znanym w latach 90. XX wieku Nintendo World Championships. Następnym spadkobiercą był Cyberathlete Professional League, który organizował turnieje przez około 6 lat (lata 2004-2010).
+
+
+    Plakat z IPL Pro League z 2012 roku
+    
+    Olbrzymi boom i rozwój w e-sport nastąpił około 2009 roku (powolny spadek nastąpił od 1997 roku z powodu azjatyckiego kryzysu finansowego), gdzie zaczęto organizować duże, międzynarodowe turnieje gier komputerowych (prawie z każdego gatunku). Najbardziej na e-sporcie zyskały gry online, głównie z gatunku MOBA. Z biegiem czasu, powstało wiele konkurujących ze sobą turniejów jak np. World Cyber Games, DreamHack, World e-Sports Games, ESL Extreme Masters czy Poznań Game Arena. Największym do tej pory wydarzeniem e-sportowym były Mistrzostwa Świata Sezonu 2017 w League of Legends, które przyciągnęły około 100 milionów widzów. W przypadku największej puli pieniężnych nagród została zgromadzona w turnieju The International 2018 w grze komputerowej Dota 2 i wynosiła ponad 25 mln dolarów.
+</p>
+            </div>
+	        <div id="tabs-2">
+    <p>Obecne turnieje są organizowane z takich gier jak League of Legends, Counter-Strike: Global Offensive, StarCraft II, Heroes of the Storm, Hearthstone, World of Tanks, Dota 2, Overwatch, Quake, Tekken, Fifa, Super Smash Bros. czy Halo. </p>
+	        </div>
+    </div>
+	<div id="lasliga"></div>
+	<div id="przejrzaneligi"></div>
+	<button id="hide" type="button" onclick="przenies()"> Przenies menu na prawą stronę </button>
+	<button id="photo" onclick="wstaw()"> Pokaz zdjecie </button>
+</div>
+<footer>
+    Copyright 2020, Garbowski Piotr 184390
+</footer>
+
+
+
+</div>
+<script>
+if(sessionStorage.getItem("lastliga")!=null) 
+{
+document.getElementById("lasliga").innerHTML = "Przed chwilą czytałeś o: "+sessionStorage.getItem("lastliga");
+}
+if(localStorage.getItem("pligi")!=null) 
+{
+var text="Ligi o których czytałeś do tej pory: ";
+if(localStorage.getItem("LEC")!=null) text+="LEC ";
+if(localStorage.getItem("LCS")!=null) text+="LCS ";
+if(localStorage.getItem("LCK")!=null) text+="LCK ";
+document.getElementById("przejrzaneligi").innerHTML = text;
+}
+</script>
+<script>
+function wstaw(){	
+var div = document.createElement('div');
+var img= document.createElement('img');
+//div.innerHTML="<img src=\"lol-baner.jpg\">";
+img.setAttribute("src","lol-baner.jpg");
+div.appendChild(img);
+const currentDiv = document.getElementById('tabs');
+currentDiv.appendChild(div);	
+document.getElementById('photo').style.display ="none";
+
+}
+</script>
+<script>
+function przenies(){
+  
+document.getElementById('lewy').style.float ="right";
+document.getElementById('hide').style.display ="none";
+}
+</script>
+<script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+</body>
